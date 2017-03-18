@@ -2,6 +2,11 @@ package ch.pg.yatzy.model;
 
 import ch.pg.yatzy.model.Dice;
 
+/**
+ * @author Patrick
+ *
+ * The Game class how creates the dices, tabels and the players.
+ */
 public class Game {
 
 	public static Dice dice1 = new Dice();
@@ -19,6 +24,9 @@ public class Game {
 	int roll = 0;
 	String actualTable = "table1";
 
+	/**
+	 * extends to the dices to roll.
+	 */
 	public void roll() {
 		dice1.roll();
 		dice2.roll();
@@ -28,6 +36,9 @@ public class Game {
 		roll++;
 	}
 
+	/**
+	 * sets every type in the tabels to 0 for the next game.
+	 */
 	public void Type() {
 		Game.table1.setOne(0);
 		Game.table1.setTwo(0);
