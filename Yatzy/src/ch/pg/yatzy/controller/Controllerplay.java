@@ -17,6 +17,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
+/**
+ * 
+ * @author Patrick
+ * 
+ * The Controller where the Game is.
+ */
 public class Controllerplay {
 
 	@FXML
@@ -35,6 +41,9 @@ public class Controllerplay {
 	String table = "table1";
 	int i = 3;
 
+	/**
+	 * Set the name for the players.
+	 */
 	@FXML
 	public void initialize() {
 		player11.setText(Game.play1.getName());
@@ -43,6 +52,11 @@ public class Controllerplay {
 		player22.setText(Game.play2.getName());
 	}
 
+	/**
+	 * @param e
+	 * 
+	 * Roll the dices. 
+	 */
 	@FXML
 	protected void Roll(ActionEvent e) {
 		image1.setVisible(true);
@@ -69,7 +83,11 @@ public class Controllerplay {
 			}
 		}
 	}
-
+	/**
+	 * @param e
+	 * 
+	 * Klick on a Button for fixing a die.
+	 */
 	@FXML
 	protected void Fix(MouseEvent e) {
 		ImageView fixer = (ImageView) e.getSource();
@@ -114,6 +132,12 @@ public class Controllerplay {
 		}
 	}
 
+	/**
+	 * @param e
+	 * 
+	 * For set a triple / ones / .....
+	 * change player and saves the end Score in a SQLite database.
+	 */
 	@FXML
 	protected void Set(ActionEvent e) {
 		if (Game.dice1.getValue() != 0) {

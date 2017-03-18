@@ -2,8 +2,6 @@ package ch.pg.yatzy.model;
 
 import java.util.Arrays;
 
-import javafx.fxml.FXML;
-
 public class Table {
 
 	private int one;
@@ -30,12 +28,10 @@ public class Table {
 	int d4;
 	int d5;
 	int[] array = new int[5];
-
-	@FXML
-	public void initialize() {
-		
-	}
 	
+	/**
+	 * To Calculate first row.
+	 */
 	public void calculateUp() {
 		calculateUp = one + two + three + four + five + six;
 		if (calculateUp > 62) {
@@ -48,6 +44,9 @@ public class Table {
 		return calculateUp;
 	}
 
+	/**
+	 * To Calculate the second row.
+	 */
 	public void calculateDown() {
 		calculateDown = triple + quatruple + fullhouse + smallstreet + bigstreet + yatzy + chanze;
 		calculatesum();
@@ -57,6 +56,9 @@ public class Table {
 		return calculateDown;
 	}
 
+	/**
+	 * To calculate the sum.
+	 */
 	public void calculatesum() {
 		sum = calculateUp + calculateDown;
 	}
@@ -65,6 +67,9 @@ public class Table {
 		return sum;
 	}
 
+	/**
+	 * To calculate how many ones jou got.
+	 */
 	public void One() {
 		if (Game.dice1.getValue() == 1) {
 			one++;
@@ -87,6 +92,9 @@ public class Table {
 		return one;
 	}
 
+	/**
+	 * To calculate how many twos jou got.
+	 */
 	public void Two() {
 		if (Game.dice1.getValue() == 2) {
 			two = two + 2;
@@ -109,6 +117,9 @@ public class Table {
 		return two;
 	}
 	
+	/**
+	 * To calculate how many threes jou got.
+	 */
 	public void Three() {
 		if (Game.dice1.getValue() == 3) {
 			three = three + 3;
@@ -131,6 +142,9 @@ public class Table {
 		return three;
 	}
 
+	/**
+	 * To calculate how many fours jou got.
+	 */
 	public void Four() {
 		if (Game.dice1.getValue() == 4) {
 			four = four + 4;
@@ -153,6 +167,9 @@ public class Table {
 		return four;
 	}
 
+	/**
+	 * To calculate how many fives jou got.
+	 */
 	public void Five() {
 		if (Game.dice1.getValue() == 5) {
 			five = five + 5;
@@ -175,6 +192,9 @@ public class Table {
 		return five;
 	}
 
+	/**
+	 * To calculate how many sixes jou got.
+	 */
 	public void Six() {
 		if (Game.dice1.getValue() == 6) {
 			six = six + 6;
@@ -201,6 +221,9 @@ public class Table {
 		return bonus;
 	}
 
+	/**
+	 * To calculate if you have a triple.
+	 */
 	public void Triple() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();
@@ -222,6 +245,9 @@ public class Table {
 		return triple;
 	}
 
+	/**
+	 * To calculate if you have a quatruple.
+	 */
 	public void Quatruple() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();
@@ -243,6 +269,9 @@ public class Table {
 		return quatruple;
 	}
 
+	/**
+	 * To calculate if you have a fullhouse.
+	 */
 	public void House() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();
@@ -264,6 +293,9 @@ public class Table {
 		return fullhouse;
 	}
 
+	/**
+	 * To calculate if you have a smalsteet(1-4).
+	 */
 	public void Smallstreet() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();
@@ -304,6 +336,9 @@ public class Table {
 		return smallstreet;
 	}
 
+	/**
+	 * To calculate if you have a bigsteet(1-5).
+	 */
 	public void BigStreet() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();
@@ -325,6 +360,9 @@ public class Table {
 		return bigstreet;
 	}
 
+	/**
+	 * To calculate if you have a yatzy.
+	 */
 	public void Yatzy() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();
@@ -348,6 +386,9 @@ public class Table {
 		return yatzy;
 	}
 
+	/**
+	 * To calculate the chanze.
+	 */
 	public void Chanze() {
 		array[0] = Game.dice1.getValue();
 		array[1] = Game.dice2.getValue();

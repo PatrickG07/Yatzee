@@ -11,12 +11,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
+/**
+ * @author Patrick
+ *
+ * The class for schowing the Person with the higest scores.
+ */
 public class Controllerhigh {
 	@FXML protected TextArea textarea;
 	
 	String all;
 	String brek = System.getProperty("line.separator");
 	
+	/**
+	 * Gets the scores and the names from the database and sort it with the higest first.
+	 */
 	@FXML
 	public void initialize() {
 		textarea.setText("");

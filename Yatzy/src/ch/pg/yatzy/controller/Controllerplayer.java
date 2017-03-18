@@ -6,6 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+/**
+ * 
+ * @author Patrick
+ *
+ * Controller class for set player name.
+ */
 public class Controllerplayer {
 	
 	@FXML
@@ -13,6 +19,11 @@ public class Controllerplayer {
 	@FXML
 	protected TextField player2;
 
+	/**
+	 * @param e
+	 * 
+	 * set a red border around the TextFilds when nothing are tiped.
+	 */
 	@FXML
 	protected void Play(ActionEvent e) {
 		if (!player1.getText().equals("") && !player2.getText().equals("")) {
@@ -26,6 +37,11 @@ public class Controllerplayer {
 		}
 	}
 
+	/**
+	 * @param e
+	 * 
+	 * Returns to the main Controller.
+	 */
 	@FXML
 	protected void Back(ActionEvent e) {
 		Start.loadScene("/ch/pg/yatzy/view/Main");
